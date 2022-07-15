@@ -1,0 +1,3 @@
+package futurenetworkcompetition;
+
+@license(LGPL);

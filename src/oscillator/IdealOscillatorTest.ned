@@ -18,13 +18,29 @@ package futurenetworkcompetition.oscillator;
 simple IdealOscillator
 {
     parameters:
-    int oscillator_frequency = default(int(1e6));
+    	double oscillator_frequency = default(1e6);
+}
+
+simple DriftOscillator
+{
+	parameters:
+	    double oscillator_frequency = default(1e6);
+	    double oscillator_drift = 0.95;
+}
+
+simple RandomDriftOscillator
+{
+    parameters:
+	    double oscillator_frequency = default(1e6);
+	    double oscillator_drift = 0.95;
 }
 
 network IdealOscillatorTest
 {
 	submodules:
-	    o:IdealOscillator;
+	    i:IdealOscillator;
+	    o:DriftOscillator;
+	    r:RandomDriftOscillator;
 	    
 	connections:
 	        

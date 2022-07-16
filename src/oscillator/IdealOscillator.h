@@ -13,10 +13,11 @@
 class IdealOscillator final: public omnetpp::cSimpleModule
 {
 private:
-    int frequency;
+    double frequency;
     omnetpp::simtime_t offset;
     omnetpp::simtime_t oscillator_time;
     omnetpp::cMessage* rising_edge_signal;
+
 public:
     IdealOscillator();
     virtual ~IdealOscillator();

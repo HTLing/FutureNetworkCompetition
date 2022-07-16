@@ -13,7 +13,7 @@
 class DriftOscillator final : public omnetpp::cSimpleModule
 {
 private:
-    int frequency;
+    double frequency;
     double drift;
     omnetpp::simtime_t offset_normal;
     omnetpp::simtime_t offset_drift;
